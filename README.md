@@ -1,6 +1,6 @@
 ## How-do-I-brew-install-local-archive
 
-================================================
+===========================================
 
 在Mac OSX系统上，通过Homebrew安装webp包时候，执行命令 "brew install webp"，报错如下：
 
@@ -30,16 +30,22 @@ Homebrew通过curl下载storage.googleapis.com资源失败。
 + 步骤二：代理下载安装文件libwebp-0.6.1.tar.gz<br/>
 
 > 通过代理proxychains4 下载文件并保存为 libwebp-0.6.1.tar.gz
->> `proxychain4s curl -O "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-0.6.1.tar.gz"`
+
+> `proxychain4s curl -O "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-0.6.1.tar.gz"`
 
 
 + 步骤三：配置brew强制从本地文件安装<br/>
 
-> 查看brew下载文件的缓存地址，假设为/absolute/path/of/brew/cached/
+> 查看brew下载文件的缓存地址
+>
 > `brew --cache`
-
+>
+> 假设为/absolute/path/of/brew/cached/
+>
 > `mv ./libwebp-0.6.1.tar.gz /absolute/path/of/brew/cached/`
-
+>
+>
+>
 > 编辑webp的formula设置
 > `brew edit webp`
 > 
