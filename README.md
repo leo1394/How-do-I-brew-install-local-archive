@@ -32,9 +32,9 @@ Homebrew通过curl下载storage.googleapis.com资源失败。
 
 + 步骤二：代理下载安装文件libwebp-0.6.1.tar.gz<br/>
 
-> 通过代理proxychains4 下载文件并保存为 libwebp-0.6.1.tar.gz
+> 通过代理proxychains4（安装方法见文末） 下载文件并保存为 libwebp-0.6.1.tar.gz
 
-> `proxychain4s curl -O "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-0.6.1.tar.gz"`
+> `proxychains4 curl -O "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-0.6.1.tar.gz"`
 
 
 + 步骤三：配置brew强制从本地文件安装<br/>
